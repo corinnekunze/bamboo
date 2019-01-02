@@ -4,21 +4,21 @@ development:
   encoding: unicode
   database: bamboo_development
   pool: 5
+  host: localhost
   username: root
-  password:
 
 test:
   adapter: postgresql
   encoding: unicode
   database: bamboo_test
   pool: 5
+  host: localhost
   username: root
-  password:
 
 production:
   adapter: postgresql
   encoding: unicode
   database: bamboo_production
   pool: 5
-  username: root
-  password:
+  username: <%= ENV['BAMBOO_DB_USERNAME'] %>
+  password: <%= ENV['BAMBOO_DB_PASSWORD'] %>

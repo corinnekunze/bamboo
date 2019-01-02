@@ -9,7 +9,6 @@ gem 'pg', '~> 1.1', '>= 1.1.3'
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
-
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
@@ -27,8 +26,14 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
+group :development, :test do
+  gem 'factory_bot_rails', '~> 4.11', '>= 4.11.1'
+  gem 'faker', '~> 1.9', '>= 1.9.1'
+end
+
 group :test do
-  gem 'rspec', '~> 3.8'
+  gem 'rspec-rails', '~> 3.8', '>= 3.8.1'
+  gem 'shoulda-matchers', '~> 3.1', '>= 3.1.2'
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
