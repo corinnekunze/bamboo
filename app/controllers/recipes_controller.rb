@@ -1,4 +1,4 @@
-class RecipesController < ApplicationController
+class RecipesController < ApiController
   before_action :find_recipe, only: %i[show destroy]
 
   rescue_from ActiveRecord::RecordNotFound do
